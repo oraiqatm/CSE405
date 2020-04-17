@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript: Scramble</title>
+        <meta name="viewport" contnet="width=device-width, initial-scale=1.0">
+        <link href="mainStyle.css" rel="stylesheet" type="text/css">
+        
+
+        
+
+    </head>
+    <body>
+        <div class = "topnav">
+            <a class = "active" href="Story.html"> Story </a>
+            <a href="Scramble.html">Scramble Words</a>
+        </div>
+        <h2>Scramble Words.</h2>
+        <p>JavaScript will take any sentence the user enters and will scramble the middle section of the word. 
+            However the first and last characters in each word will remain the same.
+        </p>
+        <form id= "frame">
+            <label for="fname"><b>Enter a Sentence to Scramble.:</b></label><br>
+            <input type="text" id="fname" name="fname" value="Only smart people can read this"><br>
+            <button type="button" onclick ="scram()"> Scramble</button>
+            <script src= scramble.js></script><br><br>
+        </form> 
+        <h2>Result: </h2>
+        <p id="scrambled">Please Click Scramble for Result.</p>
+    </body>
+  
+
+</html>
