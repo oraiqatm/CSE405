@@ -1,0 +1,30 @@
+<!DOCTYPE  html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript: Story</title>
+        <link href="/assets/mainStyle.css" rel="stylesheet" type="text/css">
+
+        
+
+    </head>
+    <body>
+        <%-include('partials/nav'); %>
+        
+        <h2>Story Time</h2>
+        <p>JavaScript will generate story based on the JSON object within the script. Click the "Generate Story" button 
+            to change the story. 
+        </p>
+        
+        <button type="button" onclick ="makeStory()"> Generate Story</button>
+        <script src= /assets/Story.js></script><br><br>
+
+        <h3 id= "storyTitle">Title will be Generated Here! </h3>
+        <p id="storyBody">Click the Generate Story Button</p>
+        
+        <p id = "success">_</p>
+
+
+    </body>
+  
+
+</html>
