@@ -66,6 +66,7 @@ db.collection('cafes').orderBy('city').onSnapshot(snapshot =>{
     console.log(changes);
 })
 
+
 /*
 db.collection('cafes').doc('documentID goes here').update({
     name:'value goes here to change in the name'
