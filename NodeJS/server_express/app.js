@@ -23,4 +23,8 @@ app.get('/textSpeech', function(req, res){
     res.render('textSpeech');
 });
 
+app.get('/raspberrypi', function(req, res){
+    res.send("Post request successful");
+})
+
 app.listen(3000);
