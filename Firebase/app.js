@@ -27,13 +27,16 @@ function renderCafe(doc){
     })
 
 }
-
+/*
 //Getting data
 db.collection('cafes').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     })
 })
+*/
+
+
 
 //Saving data
 form.addEventListener('submit', (e) =>{
@@ -46,3 +49,30 @@ form.addEventListener('submit', (e) =>{
     form.city.value = '';
 
 })    
+
+
+//realtime listener
+db.collection('cafes').orderBy('city').onSnapshot(snapshot =>{
+    let changes = snapshot.docChanges();
+    changes.forEach(change =>{
+        //console.log(change.doc.data());
+        if(change.type == 'added'){
+            renderCafe(change.doc);
+        }else if(change.type == 'removed'){
+            let li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
+            cafeList.removeChild(li);
+        }
+    })
+    console.log(changes);
+})
+
+/*
+db.collection('cafes').doc('documentID goes here').update({
+    name:'value goes here to change in the name'
+})
+
+db.collection('cafes').doc('documentID goes here').set({
+    //will overide the entire documents even if all params are not written below
+    name:'value goes here to change in the name'
+})
+*/
