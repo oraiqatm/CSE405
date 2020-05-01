@@ -22,7 +22,9 @@ app.get('/story', function(req,res){
 app.get('/textSpeech', function(req, res){
     res.render('textSpeech');
 });
-
+app.get('/cafe', function(req,res){
+    res.render('cafe');
+});
 app.get('/raspberrypi', function(req, res){
     res.send("Post request successful");
 })

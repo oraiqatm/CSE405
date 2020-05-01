@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="/assets/styles.css">
+    </head>
+    <body>
+        <%-include('partials/nav'); %>
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type= "text" name = "name" placeholder="Cafe name">
+                <input type= "text" name = "city" placeholder="Cafe City">
+                <button>Add Cafe</button>
+            </form>
+            <ul id="cafe-list"></ul>
+
+        </div>
+        
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDp7fetoWdMm9h5U8Y7ZyM7qAAnMxCEV4E",
+                authDomain: "cse405-example.firebaseapp.com",
+                databaseURL: "https://cse405-example.firebaseio.com",
+                projectId: "cse405-example",
+                storageBucket: "cse405-example.appspot.com",
+                messagingSenderId: "148058904982",
+                appId: "1:148058904982:web:db1588555c985d263165b7"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            
+        </script>
+        <script src="/assets/firestone.js"></script>
+    </body>
+</html>
